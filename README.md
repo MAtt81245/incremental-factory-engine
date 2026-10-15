@@ -1,6 +1,6 @@
 # Plans
 
-A practical workspace for Roblox development, game ideas, opportunity research, and testing ways to earn money.
+A practical workspace for Roblox development, game ideas, opportunity research, Blender/pixel-art production, and testing ways to earn money.
 
 ## Start here
 
@@ -10,14 +10,17 @@ A practical workspace for Roblox development, game ideas, opportunity research, 
 4. Store ideas in [`IDEAS.md`](IDEAS.md).
 5. Store evidence and links in [`RESEARCH.md`](RESEARCH.md).
 6. Record important decisions in [`DECISIONS.md`](DECISIONS.md).
-7. Use [`docs/INSTALL.md`](docs/INSTALL.md) to install the recommended Claude Code skills.
+7. Read [`docs/INSTALL.md`](docs/INSTALL.md) for Claude Code, Roblox, Blender, and asset tools.
+8. Read [`docs/BLENDER_PIXEL_ART.md`](docs/BLENDER_PIXEL_ART.md) for the recommended 3D-to-sprite workflow.
 
 ## Recommended division of labor
 
-- **Claude Pro / Claude Code:** main builder, Roblox coding, project planning, idea development, and execution.
-- **Gemini Pro:** broad web research, Google/YouTube trend discovery, large documents, and a second research opinion.
+- **Claude Pro / Claude Code:** main builder, Roblox coding, Blender automation, project planning, idea development, and execution.
+- **Gemini Pro:** broad web research, Google/YouTube trend discovery, visual references, and large documents.
 - **ChatGPT Free:** short independent reviews, comparisons, and skeptical critiques.
-- **This repository:** shared memory and handoff between all three tools.
+- **Blender:** 3D models, scenes, cameras, lighting, renders, and sprite-sheet generation.
+- **Aseprite or LibreSprite:** final pixel cleanup, palette work, and sprite animation.
+- **This repository:** shared memory and handoff between all tools.
 
 ## Core workflow
 
@@ -27,9 +30,10 @@ A practical workspace for Roblox development, game ideas, opportunity research, 
 3. Generate several possible offers or game concepts.
 4. Roast the weak ideas and list the assumptions.
 5. Choose the cheapest validation test.
-6. Test demand before building a large product or game.
-7. Build the smallest useful version.
-8. Measure real behavior and update the plan.
+6. For art, make a blockout before adding detail.
+7. Test demand or visual quality before building a large product or game.
+8. Build the smallest useful version.
+9. Measure real behavior and update the plan.
 ```
 
 Do not treat AI enthusiasm as proof that an idea will make money. Separate facts, estimates, inferences, opinions, and unknowns.

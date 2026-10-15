@@ -10,7 +10,7 @@ Install Claude Code using Anthropic's current instructions:
 - Skills documentation: https://docs.anthropic.com/en/docs/claude-code/skills
 - MCP documentation: https://docs.anthropic.com/en/docs/claude-code/mcp
 
-Claude Code skill folders normally contain a `SKILL.md` file. User-level skills go in `~/.claude/skills/`; project-level skills go in `.claude/skills/` inside a repository.
+Project skills are stored in `.claude/skills/`. User-level skills normally go in `~/.claude/skills/`.
 
 ## 2. Official Roblox Studio connection — install first
 
@@ -34,9 +34,9 @@ Verify the connection:
 /mcp
 ```
 
-The official plugin supports Claude Code and Cowork. Studio's MCP server runs locally; the Claude web app alone cannot connect to a local Studio process. Do not add a second Roblox Studio MCP server by hand if the official plugin is already installed.
+Do not add a second Roblox Studio MCP server until you understand which one is active.
 
-## 3. Roblox development skills
+## 3. Roblox and game-design skills
 
 ### AshExplained Roblox skills
 
@@ -45,17 +45,6 @@ Repository: https://github.com/AshExplained/roblox-skills
 ```bash
 git clone https://github.com/AshExplained/roblox-skills.git ~/.claude/skills/roblox-skills
 ```
-
-### Roblox Claude skills by mvvthw
-
-Repository: https://github.com/mvvthw/roblox-claude-skills
-
-```bash
-git clone https://github.com/mvvthw/roblox-claude-skills.git /tmp/roblox-claude-skills
-cp -R /tmp/roblox-claude-skills/* ~/.claude/skills/
-```
-
-Review skill names before copying if you already have overlapping Roblox skills.
 
 ### Bloxlab
 
@@ -67,33 +56,11 @@ Repository: https://github.com/imhugiok/bloxlab
 /reload-plugins
 ```
 
-Use it for Roblox game-mode ideation and build workflows. Install it only if you want its workflow in addition to the official Studio connection.
+### Game ideas
 
-## 4. Game ideas and critique
+Review the current repository instructions before installing third-party idea packs. The local `cheap-direct-mode` and idea-review guidance are already included in this repository.
 
-### Claude Code Game Studios
-
-Repository: https://github.com/AndrewYukon/claude-code-game-studios
-
-```bash
-git clone https://github.com/AndrewYukon/claude-code-game-studios.git /tmp/claude-code-game-studios
-cp -R /tmp/claude-code-game-studios/.claude .
-```
-
-The repository includes `/brainstorm` for structured game ideation. Use:
-
-```text
-/brainstorm Roblox game for a solo developer
-```
-
-For any game idea, ask for a harsh review:
-
-```text
-Roast this game idea. Find generic parts, weak retention, scope problems,
-boring loops, economy risks, and the cheapest prototype that could disprove it.
-```
-
-## 5. Money and opportunity research
+## 4. Money and opportunity research
 
 ### Build-DNA
 
@@ -103,24 +70,9 @@ Repository: https://github.com/Sudiddii/build-DNA
 git clone https://github.com/Sudiddii/build-DNA.git ~/.claude/skills/build-dna
 ```
 
-Use it to match your skills, resources, and unfair advantages to realistic opportunities:
-
-```text
-/build-dna Find realistic ways I could make money using my skills and resources.
-```
-
 ### Market skills
 
 Repository: https://github.com/trinity-ai-labs/market-skills
-
-Recommended plugin installation:
-
-```text
-/plugin marketplace add trinity-ai-labs/claude-plugins
-/plugin install market@trinity-ai-labs
-```
-
-Or install the two skills for development:
 
 ```bash
 git clone https://github.com/trinity-ai-labs/market-skills.git /tmp/market-skills
@@ -129,21 +81,20 @@ ln -s /tmp/market-skills/skills/market-analysis ~/.claude/skills/market-analysis
 ln -s /tmp/market-skills/skills/business-plan ~/.claude/skills/business-plan
 ```
 
-Use:
+## 5. Reduce Claude usage
+
+The repository already contains:
 
 ```text
-Run a market analysis on this opportunity. Separate facts, estimates,
-inferences, and opinions. Include competitors, pricing, willingness to pay,
-startup cost, distribution, risks, and the cheapest validation test.
+.claude/skills/cheap-direct-mode/
+.claude/skills/caveman-mode/
+.claude/skills/model-router/
+.claude/skills/subagent-gate/
+.claude/skills/research-budget/
+.claude/skills/session-handoff/
 ```
 
-## 6. Reduce Claude usage and overthinking
-
-### Token-efficiency
-
-Repository: https://github.com/denfry/claude-skills
-
-The skill is here: https://github.com/denfry/claude-skills/tree/main/skills/token-efficiency
+Optional third-party token-efficiency repository:
 
 ```bash
 git clone https://github.com/denfry/claude-skills.git /tmp/denfry-claude-skills
@@ -151,72 +102,140 @@ mkdir -p ~/.claude/skills/token-efficiency
 cp -R /tmp/denfry-claude-skills/skills/token-efficiency/* ~/.claude/skills/token-efficiency/
 ```
 
-This reduces filler, repeated rereading, unnecessary verification loops, context bloat, and avoidable tool calls. It cannot increase Claude Pro's quota.
+These instructions can reduce wasted output and context, but cannot increase a plan's quota.
 
-### Sonnet-lean routing skill
+## 6. Blender
 
-Repository: https://github.com/henriquetell/claude-skills
+Download Blender from the official site:
+
+```text
+https://www.blender.org/download/
+```
+
+Use the current stable release for normal work. Save a copy of important `.blend` files before connecting an AI.
+
+## 7. Blender MCP for Claude Code
+
+A community option currently documented for Claude Code is:
+
+Repository: https://github.com/josuemontano/blender-mcp
+
+Its documented setup uses `pipx`, a Blender add-on, and an MCP registration:
+
+### Install `pipx`
+
+Windows PowerShell:
+
+```powershell
+py -m pip install --user pipx
+py -m pipx ensurepath
+```
+
+macOS:
 
 ```bash
-git clone https://github.com/henriquetell/claude-skills.git /tmp/henriquetell-claude-skills
-cp -R /tmp/henriquetell-claude-skills/sonnet-lean ~/.claude/skills/
+brew install pipx
+pipx ensurepath
 ```
 
-Use lower-cost models for mechanical work and stronger models for architecture or difficult debugging. Check the repository's current instructions before use because model names and Claude Code behavior can change.
+Linux:
 
-### Simple direct mode
+```bash
+python3 -m pip install --user pipx
+python3 -m pipx ensurepath
+```
 
-This repository also includes a local project skill at:
+Open a new terminal, then:
+
+```bash
+pipx install blender-mcp
+blender-mcp install-addon
+claude mcp add blender blender-mcp
+```
+
+In Blender:
 
 ```text
-.claude/skills/cheap-direct-mode/SKILL.md
+Edit → Preferences → Add-ons → enable Interface: Blender MCP
+3D Viewport → N → BlenderMCP → Start MCP Server
 ```
 
-It encourages short answers, low effort for easy tasks, fewer unnecessary questions, and a `caveman mode` trigger.
-
-## 7. Shared memory between Claude, Gemini, and ChatGPT
-
-There is no guaranteed single live memory shared automatically between all three services. Use this repository as the source of truth.
-
-### Claude Pro
-
-Create a Claude Project such as **Opportunity Lab** and upload or connect the key Markdown files. Add the contents of `AI_INSTRUCTIONS.md` to the Project instructions.
-
-### Gemini Pro
-
-Use a Gem or a dedicated chat with the key files uploaded. For research, ask Gemini to write findings that can be copied into `RESEARCH.md` with source links and access dates.
-
-### ChatGPT Free
-
-Create a Project if available on your account and add the key files. Use it for independent critique and comparison. If repository connections are unavailable, paste only `CURRENT_STATE.md`, the relevant idea, and the latest research—not the entire history.
-
-### Handoff prompt
-
-Use this at the end of any substantial session:
+Verify in Claude Code:
 
 ```text
-Create a compact handoff for this repository.
-Include: completed work, new facts with links, decisions, rejected ideas,
-open questions, risks, and the exact next action. Do not invent anything.
-Format it so I can paste it into CURRENT_STATE.md, RESEARCH.md, IDEAS.md,
-or DECISIONS.md.
+/mcp
 ```
 
-## 8. Recommended order
+Test safely:
+
+```text
+Check the Blender connection. In a new scene, create one cube, one camera,
+and one light. Do not modify any other files.
+```
+
+Only run one Blender MCP server at once. The server is community software; inspect the repository and install scripts before using them.
+
+## 8. Blender asset sources
+
+### Blendkit / BlenderKit
+
+Official add-on repository: https://github.com/BlenderKit/Blendkit
+
+It integrates an asset library into Blender. Install the add-on through Blender's Preferences → Add-ons → Install, then enable it. Some assets are free and the service also has paid content; check each asset's license.
+
+### Poly Haven
+
+Website: https://polyhaven.com/
+
+License: https://polyhaven.com/license
+
+Poly Haven states that its HDRIs, textures, and models are CC0 and usable commercially. Still keep a record of the source for your own asset log.
+
+### Kenney
+
+Website: https://kenney.nl/assets
+
+License/support: https://kenney.nl/support
+
+Kenney states that its game assets are CC0, including commercial use. Check the asset page and included license file.
+
+### Roblox Creator Store
+
+Documentation: https://create.roblox.com/docs/production/creator-store
+
+Use it for Roblox models, plugins, meshes, decals, UI, and audio. Review third-party models carefully, especially scripts, and check permissions before redistributing anything.
+
+## 9. Pixel-art editors
+
+### LibreSprite
+
+Repository: https://github.com/LibreSprite/LibreSprite
+
+Free/open-source option for pixel cleanup and animation.
+
+### Aseprite
+
+Website: https://www.aseprite.org/
+
+Paid option designed for pixel art, animation, palettes, and sprite sheets.
+
+## 10. Recommended order
 
 1. Complete `USER_PROFILE.md`.
-2. Install the official Roblox Studio plugin.
-3. Add one Roblox skill set, not several overlapping sets.
-4. Add `token-efficiency` and the local `cheap-direct-mode` skill.
-5. Use Gemini Pro to research questions, customers, competitors, and prices.
-6. Use Claude Pro to synthesize, build, and test.
-7. Use ChatGPT Free to roast the shortlist.
-8. Record the result in this repository.
+2. Install Blender.
+3. Install the local project skills by opening this repository in Claude Code.
+4. Install the official Roblox Studio plugin.
+5. Install one Roblox skill set.
+6. Install Blender MCP only after testing Blender manually.
+7. Run the one-cube Blender MCP test.
+8. Test one 64x64 sprite before building a full pipeline.
+9. Use Poly Haven, Kenney, or Blendkit assets while checking licenses.
+10. Record successful commands and decisions in `CURRENT_STATE.md`.
 
-## Safety and quality
+## Safety
 
-- Review third-party skills before installing them.
+- Review third-party skills and scripts before installing them.
 - Save or publish a Roblox place before allowing an agent to make large changes.
 - Keep this repository private if it contains personal plans, customer information, credentials, or sensitive research.
 - Never put API keys, passwords, tokens, or private customer data in this repository.
-- Do not install multiple Roblox Studio MCP bridges until you understand which one is active.
+- Do not install multiple Blender or Roblox MCP bridges at the same time.
