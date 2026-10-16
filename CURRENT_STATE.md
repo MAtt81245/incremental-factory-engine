@@ -42,6 +42,9 @@ Continue **Rogue Tamer** (user decision, 2026-10-16). Steal a Meme stays private
 - Fact: the `mcpmarket-me` plugin's MCP fails with 401 (invalid token). Disabled on 2026-10-16 at the user's request (not deleted): `enabledPlugins` set to false in the user's `~/.claude/settings.json`, with a backup at `~/.claude/settings.json.bak-2026-10-16`. To re-enable, set it back to true or use Settings > Plugins.
 - Fact: Blender MCP is postponed by the user. When wanted: `winget install --id astral-sh.uv -e`, `winget install --id BlenderFoundation.Blender -e`, `uvx mcp-for-blender setup`, then a one-cube test in a new scene.
 - Fact: Fetch and Playwright are not installed (not needed now). The PC has winget, Node and Python 3.14; it lacks uv, gh and Blender.
+- Installed on the PC (2026-10-16, new Claude sessions pick them up):
+  - Skill `token-efficiency` from `denfry/claude-skills` pinned to commit `cc73299f5d9e5c1a800cf65015093bd527faf0e5`, in `~/.claude/skills/token-efficiency`, with its 4 hooks (session start, each message, after tools, stop) added by `hooks/install.py`. Backup: `settings.json.bak`. Remove hooks only: `python ~/.claude/skills/token-efficiency/hooks/install.py --uninstall`.
+  - MCP `sequential-thinking` (official, `@modelcontextprotocol/server-sequential-thinking@2026.8.31`), scope user, connected. Remove: `claude mcp remove sequential-thinking -s user`.
 - Pending: open Studio with a copy of the place and run a read-only connection check.
 - Unknown: the GitHub repositories in `docs/INSTALL.md` (Roblox plugin and third-party skills) could not be opened from the cloud session; check each one before installing.
 
