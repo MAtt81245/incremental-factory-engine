@@ -28,7 +28,7 @@ MCP servers give Claude controlled access to tools. They are not shared memory b
 - GitHub MCP Server: https://github.com/github/github-mcp-server
 - Microsoft Playwright MCP: https://github.com/microsoft/playwright-mcp
 - Roblox Studio Agent Plugin: https://github.com/Roblox/roblox-studio-agent-plugin
-- Blender MCP: see `docs/INSTALL.md`; verify the current project before installing.
+- Blender MCP (`mcp-for-blender`, formerly `blender-mcp`): https://github.com/ahujasid/blender-mcp — see `docs/INSTALL.md`.
 
 ## Claude Code commands
 
@@ -40,29 +40,33 @@ Run these only after reviewing the current README/instructions for each server a
 # Search for Roblox Studio
 
 # Playwright browser automation
-claude mcp add playwright npx @playwright/mcp@latest
+claude mcp add playwright -- npx -y @playwright/mcp@latest
 
 # Official/reference fetch server with uvx
-claude mcp add fetch uvx mcp-server-fetch
+claude mcp add fetch -- uvx mcp-server-fetch
 
 # Official/reference memory server
-claude mcp add memory npx -y @modelcontextprotocol/server-memory
+claude mcp add memory -- npx -y @modelcontextprotocol/server-memory
 
 # Official/reference sequential thinking; optional
-claude mcp add sequential-thinking npx -y @modelcontextprotocol/server-sequential-thinking
+claude mcp add sequential-thinking -- npx -y @modelcontextprotocol/server-sequential-thinking
 
 # Inspect configured servers
 /mcp
 ```
 
-The exact command syntax can vary by Claude Code version. If a command fails, ask Claude to read the current official documentation rather than guessing.
+The `--` separates Claude Code options from the server command, so flags such as `-y` reach `npx` instead of `claude`. The exact command syntax can vary by Claude Code version. If a command fails, ask Claude to read the current official documentation rather than guessing.
+
+## Config file example
+
+`docs/mcp.example.json` is a valid JSON template. Copy it outside this repository before replacing the placeholders, and never commit the real file.
 
 ## Filesystem example
 
 Do not allow the whole home directory. Replace the placeholder with the actual local path to the cloned repository:
 
 ```bash
-claude mcp add filesystem npx -y @modelcontextprotocol/server-filesystem /ABSOLUTE/PATH/TO/Plans.
+claude mcp add filesystem -- npx -y @modelcontextprotocol/server-filesystem /ABSOLUTE/PATH/TO/Plans.
 ```
 
 Allow additional folders only when needed, for example the Roblox project or Blender asset folder.

@@ -1,6 +1,6 @@
 ---
 name: blender-pixel-art
- description: Plan and automate a safe Blender-to-pixel-art workflow for game assets, sprites, renders, and Roblox imports. Use blockouts first, preserve files, and recommend a pixel-art editor for final cleanup.
+description: Plan and automate a safe Blender-to-pixel-art workflow for game assets, sprites, renders, and Roblox imports. Use blockouts first, preserve files, and recommend a pixel-art editor for final cleanup.
 ---
 
 # Blender Pixel Art

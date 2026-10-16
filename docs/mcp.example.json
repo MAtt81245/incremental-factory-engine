@@ -1,13 +1,8 @@
-# MCP Configuration Template
-
-This is an example only. Do not use it unchanged. Do not commit secrets or machine-specific paths.
-
-```json
 {
   "mcpServers": {
     "playwright": {
       "command": "npx",
-      "args": ["@playwright/mcp@latest"]
+      "args": ["-y", "@playwright/mcp@latest"]
     },
     "fetch": {
       "command": "uvx",
@@ -30,6 +25,3 @@ This is an example only. Do not use it unchanged. Do not commit secrets or machi
     }
   }
 }
-```
-
-Only add GitHub, Roblox Studio, or Blender after following their current official setup instructions. Do not commit the real configuration if it contains local paths, tokens, or private endpoints.

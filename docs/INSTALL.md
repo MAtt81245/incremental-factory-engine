@@ -10,6 +10,8 @@ Install Claude Code using Anthropic's current instructions:
 - Skills documentation: https://docs.anthropic.com/en/docs/claude-code/skills
 - MCP documentation: https://docs.anthropic.com/en/docs/claude-code/mcp
 
+These links were written for docs.anthropic.com; Claude Code docs may now redirect to https://code.claude.com/docs. Follow the redirect if a link moves.
+
 Project skills are stored in `.claude/skills/`. User-level skills normally go in `~/.claude/skills/`.
 
 ## 2. Official Roblox Studio connection — install first
@@ -75,10 +77,10 @@ git clone https://github.com/Sudiddii/build-DNA.git ~/.claude/skills/build-dna
 Repository: https://github.com/trinity-ai-labs/market-skills
 
 ```bash
-git clone https://github.com/trinity-ai-labs/market-skills.git /tmp/market-skills
+git clone https://github.com/trinity-ai-labs/market-skills.git ~/.claude/vendor/market-skills
 mkdir -p ~/.claude/skills
-ln -s /tmp/market-skills/skills/market-analysis ~/.claude/skills/market-analysis
-ln -s /tmp/market-skills/skills/business-plan ~/.claude/skills/business-plan
+ln -s ~/.claude/vendor/market-skills/skills/market-analysis ~/.claude/skills/market-analysis
+ln -s ~/.claude/vendor/market-skills/skills/business-plan ~/.claude/skills/business-plan
 ```
 
 ## 5. Reduce Claude usage
@@ -116,44 +118,27 @@ Use the current stable release for normal work. Save a copy of important `.blend
 
 ## 7. Blender MCP for Claude Code
 
-A community option currently documented for Claude Code is:
+Project: https://github.com/ahujasid/blender-mcp
 
-Repository: https://github.com/josuemontano/blender-mcp
+Its PyPI package was renamed from `blender-mcp` to `mcp-for-blender` (checked on PyPI on 2026-10-16, version 2.1.9). The old name still works but new installs should use the new one. Note: the `blender-mcp` PyPI package is **not** `josuemontano/blender-mcp`; do not mix the two projects' instructions.
 
-Its documented setup uses `pipx`, a Blender add-on, and an MCP registration:
+### Install `uv`
 
-### Install `pipx`
+The setup command needs `uv`: https://docs.astral.sh/uv/getting-started/installation/
 
-Windows PowerShell:
+### Set up
 
-```powershell
-py -m pip install --user pipx
-py -m pipx ensurepath
-```
-
-macOS:
+Read the project's README first. Then, with `uv` installed:
 
 ```bash
-brew install pipx
-pipx ensurepath
+uvx mcp-for-blender setup
 ```
 
-Linux:
+It detects Claude Code and other MCP clients, lets you choose which to configure, adds a `blender` entry (keeping a `.bak` of each changed config file), and installs and enables the Blender add-on. Prefer this over the project's `curl … | sh` one-liner, which runs a remote script without letting you inspect it first.
 
-```bash
-python3 -m pip install --user pipx
-python3 -m pipx ensurepath
-```
+Fully quit and reopen Claude Code afterwards.
 
-Open a new terminal, then:
-
-```bash
-pipx install blender-mcp
-blender-mcp install-addon
-claude mcp add blender blender-mcp
-```
-
-In Blender:
+If the add-on is not already running, in Blender:
 
 ```text
 Edit → Preferences → Add-ons → enable Interface: Blender MCP
