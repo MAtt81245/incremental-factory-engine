@@ -38,6 +38,11 @@ Continue **Rogue Tamer** (user decision, 2026-10-16). Steal a Meme stays private
 - Fact: the Claude project (cloud) already has GitHub (this repository only), Gmail, Google Calendar, Google Drive, Notion, Indeed and Claude Docs connected. `mcpmarket-me` failed to connect (proxy 403).
 - Fact: Roblox Studio, Blender, Filesystem, Fetch, Playwright and Memory MCPs must be installed in local Claude Code on the user's PC; a cloud session cannot reach them.
 - Fixed: Blender MCP docs now use `mcp-for-blender` (ahujasid), `docs/mcp.example.json` is valid JSON, `claude mcp add` commands use `--`, the blender-pixel-art skill header loads, and market-skills no longer lives in `/tmp`.
+- Fact (PC check, 2026-10-16): the official Roblox Studio MCP is already installed and connected (desktop extension `Roblox_Studio`, 30 tools, includes skills). Not yet tested with Studio open; Studio was updating. Do not add a second Roblox MCP.
+- Fact: the `mcpmarket-me` plugin's MCP fails with 401 (invalid token). The user asked to disable it without deleting it; the PC session's result is not yet confirmed.
+- Fact: Blender MCP is postponed by the user. When wanted: `winget install --id astral-sh.uv -e`, `winget install --id BlenderFoundation.Blender -e`, `uvx mcp-for-blender setup`, then a one-cube test in a new scene.
+- Fact: Fetch and Playwright are not installed (not needed now). The PC has winget, Node and Python 3.14; it lacks uv, gh and Blender.
+- Pending: open Studio with a copy of the place and run a read-only connection check.
 - Unknown: the GitHub repositories in `docs/INSTALL.md` (Roblox plugin and third-party skills) could not be opened from the cloud session; check each one before installing.
 
 ## Open questions
