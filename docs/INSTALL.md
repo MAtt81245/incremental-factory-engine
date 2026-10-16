@@ -88,11 +88,7 @@ ln -s ~/.claude/vendor/market-skills/skills/business-plan ~/.claude/skills/busin
 The repository already contains:
 
 ```text
-.claude/skills/cheap-direct-mode/
-.claude/skills/caveman-mode/
-.claude/skills/model-router/
-.claude/skills/subagent-gate/
-.claude/skills/research-budget/
+.claude/skills/cheap-direct-mode/   (also covers caveman mode, effort, subagents, research budget)
 .claude/skills/session-handoff/
 ```
 

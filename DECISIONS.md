@@ -59,3 +59,17 @@ Record decisions so every AI can continue from the same place.
 - Alternatives considered: Launching Steal a Meme first (earlier recommendation by Claude).
 - Risks to watch: Rogue Tamer's scope is very large for one person, turn-based play is less sticky on Roblox, and it resembles Pokémon. No player data exists for it yet.
 - Revisit when: Rogue Tamer has real-player retention data, or if scope keeps growing without testers.
+
+### 2026-10-16 — Incremental game factory waits for Rogue Tamer
+
+- Decision: Until Rogue Tamer's closed test, the reusable incremental-game factory stays in `IDEAS.md`. No factory code is built before then.
+- Why: Building a factory before the first incremental game ships is over-engineering, and splitting time between two large projects is the main risk already noted.
+- Evidence: Audit in `docs/AUDIT_2026-10-16.md`. No player data for Rogue Tamer or any incremental game yet.
+- Alternatives considered: Pause Rogue Tamer and build incremental game 1 first.
+- Revisit when: Rogue Tamer's closed test has retention data.
+
+### 2026-10-16 — Merge overlapping skills
+
+- Decision: Merge `caveman-mode`, `model-router`, `subagent-gate`, and `research-budget` into `cheap-direct-mode`. Keep `session-handoff` and `blender-pixel-art`.
+- Why: The five skills repeated each other and `CLAUDE.md`; each skill description costs tokens every session. A skill cannot switch models, so `model-router` was misleading.
+- Revisit when: A missing behaviour shows up in practice.

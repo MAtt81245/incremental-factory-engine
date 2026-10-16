@@ -13,12 +13,9 @@
 
 Use the cheapest appropriate skill for the job:
 
-- `cheap-direct-mode` for routine work.
-- `caveman-mode` when the user asks for very short answers.
-- `model-router` for effort selection.
-- `subagent-gate` to avoid unnecessary delegation.
-- `research-budget` to keep investigations focused.
+- `cheap-direct-mode` for routine work, very short ("caveman") answers, effort selection, subagent use, and research budget.
 - `session-handoff` when the conversation becomes long.
+- `blender-pixel-art` for Blender and sprite work.
 
 ## Output style
 
