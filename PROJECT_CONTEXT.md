@@ -30,6 +30,10 @@ Explore realistic ways to build games, tools, content, services, or other produc
 - Preferred income types: service / product / content / game / other
 - Geographic or age restrictions: `18 years old, lives in Spain (Stripe-supported, so USD selling on the Creator Store is possible)`
 
+## Games
+
+Two Roblox games are in development: Steal a Meme and Rogue Tamer. See `docs/games/` and `CURRENT_STATE.md`.
+
 ## Rules
 
 Research first. Test willingness to pay second. Build third.
