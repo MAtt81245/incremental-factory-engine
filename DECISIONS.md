@@ -43,10 +43,19 @@ Record decisions so every AI can continue from the same place.
 - Revisit when: the 14-day free-model test ends, or when the state of Steal a Meme and Rogue Tamer is recorded (a game near a playable test may deserve priority).
 - Update 2026-10-16: user is 18 and lives in Spain, so USD selling on the Creator Store is allowed.
 
-### 2026-10-16 — Publish Steal a Meme first
+### 2026-10-16 — Publish Steal a Meme first (superseded by the next entry)
 
 - Decision: Finish and publish Steal a Meme before more work on Rogue Tamer or a third game. Model packs become an optional side test.
 - Why: The user's own project summaries show Steal a Meme has a complete core loop, while Rogue Tamer is very large for one person. The user also said he does not want to sell beginner-level work, so scarce hours go to the game that is closest to real data. Spreading across three games, trading, tutoring, studies and a channel is the main risk.
 - Evidence: `docs/games/steal-a-meme-summary.txt`, `docs/games/rogue-tamer-summary.txt`, summary of past chats provided by the user (2026-10-16). No player or revenue data yet.
 - Alternatives considered: Rogue Tamer first (more exciting to the user but much larger), model packs first (see previous entry).
 - Revisit when: Steal a Meme has two weeks of analytics, or the user decides otherwise.
+
+### 2026-10-16 — Continue Rogue Tamer, keep Steal a Meme private
+
+- Decision: The user keeps Steal a Meme private and continues Rogue Tamer.
+- Why: The user judges the Steal a Brainrot-style market over-exploited, with few games reaching that level. This matches the user's own earlier research (many short-lived clones, at least 4 lawsuits from the original's creators).
+- Evidence: User's statement (2026-10-16); `docs/games/steal-a-meme-summary.txt`.
+- Alternatives considered: Launching Steal a Meme first (earlier recommendation by Claude).
+- Risks to watch: Rogue Tamer's scope is very large for one person, turn-based play is less sticky on Roblox, and it resembles Pokémon. No player data exists for it yet.
+- Revisit when: Rogue Tamer has real-player retention data, or if scope keeps growing without testers.
