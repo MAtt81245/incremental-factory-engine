@@ -10,7 +10,12 @@ Low-poly Blender models for the Roblox Creator Store (see `IDEAS.md` and `DECISI
 
 ## Strongest game ideas
 
-- None recorded yet. A tiny Roblox game is kept as a learning and portfolio project, not as an income plan.
+Two Roblox games are already in development:
+
+- **Steal a Meme** — details not yet recorded in this repository.
+- **Rogue Tamer** — details not yet recorded in this repository.
+
+TODO: record genre, core loop, current progress, and what is blocking each game. Blender props from the model-pack test can also be reused in both games.
 
 ## Strongest money-making ideas
 
@@ -39,7 +44,7 @@ Low-poly Blender models for the Roblox Creator Store (see `IDEAS.md` and `DECISI
 
 ## Open questions
 
-- Age and country: needed to know if USD selling (18+, or 13–17 with a parent) and Stripe payouts are possible.
+- Steal a Meme and Rogue Tamer: core loop, progress, and which one is closer to a playable test?
 - Which kind of low-poly model is most used on the Creator Store?
 - Which customer group is easiest to reach?
 - Which problem has evidence of willingness to pay?

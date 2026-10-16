@@ -28,7 +28,7 @@ Explore realistic ways to build games, tools, content, services, or other produc
 - Current Roblox/Luau skill level: `Beginner; mostly AI-assisted (vibe) coding`
 - Other useful skills: `Blender; first-year C programming`
 - Preferred income types: service / product / content / game / other
-- Geographic or age restrictions: `TODO`
+- Geographic or age restrictions: `18 years old, lives in Spain (Stripe-supported, so USD selling on the Creator Store is possible)`
 
 ## Rules
 

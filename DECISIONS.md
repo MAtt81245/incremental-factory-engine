@@ -40,4 +40,5 @@ Record decisions so every AI can continue from the same place.
 - Why: Uses the Blender skill, costs nothing, and the store brings buyers without an audience. Paid scripting needs stronger Luau skill than AI-assisted coding.
 - Evidence: Roblox Creator Store and DevEx docs (2026-10-16, `RESEARCH.md`). No demand evidence yet.
 - Alternatives considered: scripting services, education, a money-focused Roblox game (DevEx needs 30,000 earned Robux).
-- Revisit when: the 14-day free-model test ends, or age/country rules block USD selling.
+- Revisit when: the 14-day free-model test ends, or when the state of Steal a Meme and Rogue Tamer is recorded (a game near a playable test may deserve priority).
+- Update 2026-10-16: user is 18 and lives in Spain, so USD selling on the Creator Store is allowed.
