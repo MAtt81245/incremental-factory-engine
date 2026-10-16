@@ -1,0 +1,35 @@
+# MCP Configuration Template
+
+This is an example only. Do not use it unchanged. Do not commit secrets or machine-specific paths.
+
+```json
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp@latest"]
+    },
+    "fetch": {
+      "command": "uvx",
+      "args": ["mcp-server-fetch"]
+    },
+    "memory": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-memory"],
+      "env": {
+        "MEMORY_FILE_PATH": "REPLACE_WITH_A_LOCAL_PATH_OUTSIDE_THIS_REPOSITORY"
+      }
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "REPLACE_WITH_THE_ABSOLUTE_PATH_TO_THIS_REPOSITORY"
+      ]
+    }
+  }
+}
+```
+
+Only add GitHub, Roblox Studio, or Blender after following their current official setup instructions. Do not commit the real configuration if it contains local paths, tokens, or private endpoints.
