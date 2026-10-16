@@ -33,3 +33,11 @@ Record decisions so every AI can continue from the same place.
 - Evidence: Setup audit in `CURRENT_STATE.md` (2026-10-16).
 - Alternatives considered: Filesystem or Memory first. They are not needed while the repository is the memory.
 - Revisit when: The Roblox plugin is working, or a task needs a different tool.
+
+### 2026-10-16 — First opportunity to test
+
+- Decision: Test low-poly model packs on the Roblox Creator Store first. Pause paid scripting help and beginner education.
+- Why: Uses the Blender skill, costs nothing, and the store brings buyers without an audience. Paid scripting needs stronger Luau skill than AI-assisted coding.
+- Evidence: Roblox Creator Store and DevEx docs (2026-10-16, `RESEARCH.md`). No demand evidence yet.
+- Alternatives considered: scripting services, education, a money-focused Roblox game (DevEx needs 30,000 earned Robux).
+- Revisit when: the 14-day free-model test ends, or age/country rules block USD selling.

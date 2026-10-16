@@ -6,19 +6,21 @@ Find and test a realistic opportunity connected to Roblox, game development, AI,
 
 ## Current best opportunity
 
-Not decided yet.
+Low-poly Blender models for the Roblox Creator Store (see `IDEAS.md` and `DECISIONS.md`, 2026-10-16). Status: testing demand with free models first. Not proven to make money.
 
 ## Strongest game ideas
 
-- None recorded yet.
+- None recorded yet. A tiny Roblox game is kept as a learning and portfolio project, not as an income plan.
 
 ## Strongest money-making ideas
 
-- None recorded yet.
+1. Low-poly model packs on the Roblox Creator Store (uses Blender skill, zero cost, built-in store traffic).
+2. Later: faceless content showing the Blender-to-Roblox process, to drive traffic to the models.
+3. Later: paid Roblox scripting help, only after real, tested Luau skill.
 
 ## Evidence collected
 
-- None recorded yet.
+- Creator Store and DevEx rules checked on 2026-10-16 (see `RESEARCH.md`). No demand evidence yet.
 
 ## Decisions
 
@@ -37,10 +39,11 @@ Not decided yet.
 
 ## Open questions
 
-- What skills and time are available?
+- Age and country: needed to know if USD selling (18+, or 13–17 with a parent) and Stripe payouts are possible.
+- Which kind of low-poly model is most used on the Creator Store?
 - Which customer group is easiest to reach?
 - Which problem has evidence of willingness to pay?
 
 ## Next action
 
-Complete `USER_PROFILE.md`. Then, on the PC: save a copy of the Roblox place, install the official Roblox Studio plugin, and check it with `/mcp`. After that, ask Gemini to research customer questions and existing paid solutions related to Roblox development or another chosen interest.
+Make one simple low-poly prop in Blender, import it into Roblox Studio, and publish it free on the Creator Store. Then make two more and record installs and favourites after 14 days.
