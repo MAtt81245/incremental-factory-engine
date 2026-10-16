@@ -6,17 +6,17 @@ Find and test a realistic opportunity connected to Roblox, game development, AI,
 
 ## Current best opportunity
 
-Publish **Steal a Meme** first, to learn publishing and read analytics, before going deeper on the second game (see `DECISIONS.md`, 2026-10-16). Not proven to make money. Low-poly model packs for the Creator Store are an optional side test, not the main plan.
+Continue **Rogue Tamer** (user decision, 2026-10-16). Steal a Meme stays private: the user judges the Steal a Brainrot-style market over-exploited, with few games reaching that level. Not proven to make money. Low-poly model packs remain an optional side test.
 
 ## Games in development (summaries in `docs/games/`)
 
-- **Steal a Meme** (Steal a Brainrot-style) — core loop is playable end to end; a new "forest mode" (99 Nights + tower defense) is built but switched off (`ForestMap.Active = false`). Before launch: real PassId/ProductId values (all 0, so no Robux comes in), remove or limit two fixed admin accounts, three failing sounds, test with real players and on mobile. Unclear if it is private or published with a few hundred players (notes conflict).
+- **Steal a Meme** (Steal a Brainrot-style) — core loop is playable end to end; a new "forest mode" (99 Nights + tower defense) is built but switched off (`ForestMap.Active = false`). Before launch: real PassId/ProductId values (all 0, so no Robux comes in), remove or limit two fixed admin accounts, three failing sounds, test with real players and on mobile. **Private** (confirmed by the user, 2026-10-16); not being launched for now.
 - **Rogue Tamer** (PokéRogue-style, "Critter Rogue" place) — far larger than a prototype: 100 creatures, 34 biomes, 372 moves, many modes and systems. Missing: 14 special-form sprites, 11 icons, English translation, remove `DEV_UNLOCK_ALL`, real Premium Pass IDs. Open risks: huge scope, turn-based play is less sticky on Roblox, resemblance to Pokémon.
 - A third idea (zombie survival, Project Zomboid-style) was only mentioned on 2026-10-13. Not started.
 
 ## Strongest money-making ideas
 
-1. Launch Steal a Meme and learn from real analytics (long-term, uncertain).
+1. Rogue Tamer: get a limited release in front of real players to measure retention (long-term, uncertain).
 2. Already earning a little: online English tutoring (Mon/Thu, monthly invoicing). Possible extra: maths/physics/chemistry on Superprof.
 3. Optional side test: low-poly Blender model packs on the Creator Store (zero cost; no demand evidence yet).
 4. AI trading is a 5–10 € experiment only, not an income plan.
@@ -42,7 +42,7 @@ Publish **Steal a Meme** first, to learn publishing and read analytics, before g
 
 ## Open questions
 
-- Is Steal a Meme published or private, and how many unique players does it have?
+- When will Rogue Tamer get its first real players (closed test or limited release)?
 - Will recurring income (Roblox, tutoring) require registering as self-employed (autónomo)? Decide before the first payout.
 - Which kind of low-poly model is most used on the Creator Store (only if the side test continues)?
 - Which customer group is easiest to reach?
@@ -50,4 +50,4 @@ Publish **Steal a Meme** first, to learn publishing and read analytics, before g
 
 ## Next action
 
-Finish the launch blockers for Steal a Meme (real product IDs, admin accounts, sounds), test with real players and on mobile, and publish with minimal visuals. Keep Rogue Tamer scope frozen until Steal a Meme has analytics.
+Choose the smallest Rogue Tamer release that real players can try (for example a closed test with friends), fix its launch blockers (remove `DEV_UNLOCK_ALL`, set real Premium Pass IDs, translate new text to English), and measure retention before adding more systems.

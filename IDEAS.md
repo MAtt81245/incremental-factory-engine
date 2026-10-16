@@ -55,7 +55,7 @@ Use one section per idea. Do not promote an idea here without recording its assu
 ### Steal a Meme launch
 
 - Type: game
-- Status: build — finish launch blockers and publish (see `docs/games/steal-a-meme-summary.txt`)
+- Status: paused, kept private (user decision, 2026-10-16: market judged over-exploited). Details in `docs/games/steal-a-meme-summary.txt`
 - Main assumption: a themed Steal a Brainrot-style game can retain players for 28 days; the creators of the original have filed at least four lawsuits against clones (user's own research), so avoid copyrighted characters.
 - Cheapest validation test: publish with minimal visuals, spend 50–100 $ on ads at most for a first test, read retention.
 - Kill criteria: poor retention after the ad test, so no more than 150–300 $ total.
@@ -63,5 +63,5 @@ Use one section per idea. Do not promote an idea here without recording its assu
 ### Rogue Tamer
 
 - Type: game
-- Status: paused after the current build until Steal a Meme has data
+- Status: build (main project since 2026-10-16). Next: smallest release real players can try, then measure retention
 - Main risks: huge scope, turn-based combat is less sticky on Roblox, resemblance to Pokémon.
