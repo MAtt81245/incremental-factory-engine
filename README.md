@@ -5,13 +5,14 @@ A practical workspace for Roblox development, game ideas, opportunity research, 
 ## Start here
 
 1. Read [`AI_INSTRUCTIONS.md`](AI_INSTRUCTIONS.md).
-2. Fill in [`USER_PROFILE.md`](USER_PROFILE.md).
+2. Read [`USER_PROFILE.md`](USER_PROFILE.md) (already filled in; update when things change).
 3. Keep the current plan in [`CURRENT_STATE.md`](CURRENT_STATE.md).
 4. Store ideas in [`IDEAS.md`](IDEAS.md).
 5. Store evidence and links in [`RESEARCH.md`](RESEARCH.md).
 6. Record important decisions in [`DECISIONS.md`](DECISIONS.md).
 7. Read [`docs/INSTALL.md`](docs/INSTALL.md) for Claude Code, Roblox, Blender, and asset tools.
 8. Read [`docs/BLENDER_PIXEL_ART.md`](docs/BLENDER_PIXEL_ART.md) for the recommended 3D-to-sprite workflow.
+9. MCP status: [`docs/MCP_PLAN.md`](docs/MCP_PLAN.md); setup history: [`docs/SETUP_LOG.md`](docs/SETUP_LOG.md); latest audit: [`docs/AUDIT_2026-10-16.md`](docs/AUDIT_2026-10-16.md).
 
 ## Recommended division of labor
 
