@@ -47,6 +47,10 @@ Continue **Rogue Tamer** (user decision, 2026-10-16). Steal a Meme stays private
   - MCP `sequential-thinking` was installed and removed the same day (`claude mcp remove sequential-thinking -s user`) to save tokens.
 - Minimal setup (2026-10-16): skills = `token-efficiency` (with hooks) plus the ones bundled with the official Roblox MCP; MCP = official Roblox Studio only; plugins = none (`mcpmarket-me` disabled); research = built-in web tools; sprites = made outside with Gemini; Blender MCP pending (uv, Blender, `uvx mcp-for-blender setup`).
 - Pending for the user: turn off the Gmail, Notion, Indeed, Google Calendar and Google Drive connectors in Roblox sessions (the app does not let Claude change connectors from a Project session): Claude desktop app, message box, + > Connectors; or claude.ai > Settings > Connectors.
+- Also installed on the PC (2026-10-16): the 7 skills from this repo's `.claude/skills/` copied to `~/.claude/skills` (8 skills with `token-efficiency`); statusline `denfry/claude-code-statusline` pinned to commit `80643fd` (`~/.claude/statusline.js`, `statusLine` in settings.json; shows in terminal Claude Code, may not show in the desktop app). The context audit (`context_budget.py --report`) came out clean.
+- Overlap note: `caveman-mode`, `cheap-direct-mode`, `model-router` and `token-efficiency` say nearly the same thing. If context needs trimming, keep `token-efficiency` and `cheap-direct-mode`.
+- The Roblox place 116788919429102 (`10162026_2`) is the working COPY; it can be edited through the MCP while Play mode is stopped.
+- Connectors (Gmail, Notion, Indeed, Calendar, Drive) are turned off by the user; changes apply to new sessions.
 - Verified (2026-10-16): the official Roblox Studio MCP detects the open place and answers a read-only state check (Studio was in Play mode). MCP setup is complete.
 - Unknown: the GitHub repositories in `docs/INSTALL.md` (Roblox plugin and third-party skills) could not be opened from the cloud session; check each one before installing.
 
