@@ -32,27 +32,22 @@ Continue **Rogue Tamer** (user decision, 2026-10-16). Steal a Meme stays private
 - Use Gemini Pro for broad/current research.
 - Use ChatGPT Free for independent critique.
 
-## Setup audit (2026-10-16)
+## Setup (summary — details in `docs/SETUP_LOG.md`, status in `docs/MCP_PLAN.md`)
 
-- Fact: `USER_PROFILE.md` was filled in on 2026-10-16 and the game summaries were added in `docs/games/`.
-- Fact: the Claude project (cloud) already has GitHub (this repository only), Gmail, Google Calendar, Google Drive, Notion, Indeed and Claude Docs connected. `mcpmarket-me` failed to connect (proxy 403).
-- Fact: Roblox Studio, Blender, Filesystem, Fetch, Playwright and Memory MCPs must be installed in local Claude Code on the user's PC; a cloud session cannot reach them.
-- Fixed: Blender MCP docs now use `mcp-for-blender` (ahujasid), `docs/mcp.example.json` is valid JSON, `claude mcp add` commands use `--`, the blender-pixel-art skill header loads, and market-skills no longer lives in `/tmp`.
-- Fact (PC check, 2026-10-16): the official Roblox Studio MCP is already installed and connected (desktop extension `Roblox_Studio`, 30 tools, includes skills). Not yet tested with Studio open; Studio was updating. Do not add a second Roblox MCP.
-- Fact: the `mcpmarket-me` plugin's MCP fails with 401 (invalid token). Disabled on 2026-10-16 at the user's request (not deleted): `enabledPlugins` set to false in the user's `~/.claude/settings.json`, with a backup at `~/.claude/settings.json.bak-2026-10-16`. To re-enable, set it back to true or use Settings > Plugins.
-- Fact: Blender MCP is postponed by the user. When wanted: `winget install --id astral-sh.uv -e`, `winget install --id BlenderFoundation.Blender -e`, `uvx mcp-for-blender setup`, then a one-cube test in a new scene.
-- Fact: Fetch and Playwright are not installed (not needed now). The PC has winget, Node and Python 3.14; it lacks uv, gh and Blender.
-- Installed on the PC (2026-10-16, new Claude sessions pick them up):
-  - Skill `token-efficiency` from `denfry/claude-skills` pinned to commit `cc73299f5d9e5c1a800cf65015093bd527faf0e5`, in `~/.claude/skills/token-efficiency`, with its 4 hooks (session start, each message, after tools, stop) added by `hooks/install.py`. Backup: `settings.json.bak`. Remove hooks only: `python ~/.claude/skills/token-efficiency/hooks/install.py --uninstall`.
-  - MCP `sequential-thinking` was installed and removed the same day (`claude mcp remove sequential-thinking -s user`) to save tokens.
-- Minimal setup (2026-10-16): skills = `token-efficiency` (with hooks) plus the ones bundled with the official Roblox MCP; MCP = official Roblox Studio only; plugins = none (`mcpmarket-me` disabled); research = built-in web tools; sprites = made outside with Gemini; Blender MCP pending (uv, Blender, `uvx mcp-for-blender setup`).
-- Pending for the user: turn off the Gmail, Notion, Indeed, Google Calendar and Google Drive connectors in Roblox sessions (the app does not let Claude change connectors from a Project session): Claude desktop app, message box, + > Connectors; or claude.ai > Settings > Connectors.
-- Verified (2026-10-16): the official Roblox Studio MCP detects the open place and answers a read-only state check (Studio was in Play mode). MCP setup is complete.
-- Unknown: the GitHub repositories in `docs/INSTALL.md` (Roblox plugin and third-party skills) could not be opened from the cloud session; check each one before installing.
+- Active: official Roblox Studio MCP on the PC (verified 2026-10-16); GitHub, Google Drive and Claude Docs in the cloud.
+- Skills: repository = `cheap-direct-mode`, `session-handoff`, `blender-pixel-art`; PC = `token-efficiency` (with hooks) plus those bundled with the Roblox MCP.
+- Postponed: Blender MCP, Playwright. Not recommended: Filesystem, Fetch, Git, Memory, Sequential Thinking.
+- Pending for the user: disable `mcpmarket-me` in claude.ai too; turn off Gmail, Notion, Indeed and Calendar connectors for Roblox sessions.
+
+## Key risks (audit 2026-10-16, `docs/AUDIT_2026-10-16.md`)
+
+- Game code is not version-controlled; it lives only in Studio. Save/publish before any MCP edit.
+- Gemini/Vertex AI credits expire 2027-01-03; Rogue Tamer still needs ~44 sprites.
+- Rogue Tamer reuses near-literal Pokémon names (Mega, Gigamax, Tera, item names). Rename before any public release.
 
 ## Open questions
 
-- When will Rogue Tamer get its first real players (closed test or limited release)?
+- When will Rogue Tamer get its first real players (closed test or limited release)? The incremental factory waits for this (`DECISIONS.md`).
 - Will recurring income (Roblox, tutoring) require registering as self-employed (autónomo)? Decide before the first payout.
 - Which kind of low-poly model is most used on the Creator Store (only if the side test continues)?
 - Which customer group is easiest to reach?
