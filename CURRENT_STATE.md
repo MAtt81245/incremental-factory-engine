@@ -12,6 +12,7 @@ Continue **Rogue Tamer** (user decision, 2026-10-16). Steal a Meme stays private
 
 - **Steal a Meme** (Steal a Brainrot-style) — core loop is playable end to end; a new "forest mode" (99 Nights + tower defense) is built but switched off (`ForestMap.Active = false`). Before launch: real PassId/ProductId values (all 0, so no Robux comes in), remove or limit two fixed admin accounts, three failing sounds, test with real players and on mobile. **Private** (confirmed by the user, 2026-10-16); not being launched for now.
 - **Rogue Tamer** (PokéRogue-style, "Critter Rogue" place) — far larger than a prototype: 100 creatures, 34 biomes, 372 moves, many modes and systems. Missing: 14 special-form sprites, 11 icons, English translation, remove `DEV_UNLOCK_ALL`, real Premium Pass IDs. Open risks: huge scope, turn-based play is less sticky on Roblox, resemblance to Pokémon.
+- **Pure Incremental Factory Engine** (`games/incremental-factory/`, built 2026-10-20). This is a reusable, config-driven incremental engine (Argon) with a greybox test zone. It passes the type-check and a mocked simulation, but has not been tested in Studio. Missing: real product and gamepass IDs (all 0), and balancing with players.
 - A third idea (zombie survival, Project Zomboid-style) was only mentioned on 2026-10-13. Not started.
 
 ## Strongest money-making ideas
