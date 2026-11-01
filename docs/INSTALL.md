@@ -88,23 +88,25 @@ ln -s ~/.claude/vendor/market-skills/skills/business-plan ~/.claude/skills/busin
 The repository already contains:
 
 ```text
-.claude/skills/cheap-direct-mode/
-.claude/skills/caveman-mode/
-.claude/skills/model-router/
-.claude/skills/subagent-gate/
-.claude/skills/research-budget/
+.claude/skills/cheap-direct-mode/   (also covers caveman mode, effort, subagents, research budget)
 .claude/skills/session-handoff/
 ```
 
-Optional third-party token-efficiency repository:
-
-```bash
-git clone https://github.com/denfry/claude-skills.git /tmp/denfry-claude-skills
-mkdir -p ~/.claude/skills/token-efficiency
-cp -R /tmp/denfry-claude-skills/skills/token-efficiency/* ~/.claude/skills/token-efficiency/
-```
+Third-party `token-efficiency` skill: **already installed on the PC** (2026-10-16), pinned to commit `cc73299f5d9e5c1a800cf65015093bd527faf0e5`, with hooks. Details and uninstall command in `docs/SETUP_LOG.md`. To reinstall on another machine, clone to a permanent folder (not `/tmp`), check out that commit, and review `hooks/install.py` before running it.
 
 These instructions can reduce wasted output and context, but cannot increase a plan's quota.
+
+## 5b. Roblox code toolchain — planned (phase 2, not installed)
+
+Goal: keep Luau code in git instead of only inside Studio places, so it can be backed up, reviewed, and reused across games.
+
+- Rokit (toolchain manager): https://github.com/rojo-rbx/rokit
+- Rojo (sync files ↔ Studio, plus its Studio plugin): https://rojo.space/docs
+- StyLua (formatter): https://github.com/JohnnyMorganz/StyLua
+- selene (linter): https://github.com/Kampfkarren/selene
+- Git for Windows if missing: https://git-scm.com/download/win
+
+Install only after reading each project's current README. Start with Rogue Tamer or the incremental kit, one place at a time, and keep a published copy of the place before the first sync.
 
 ## 6. Blender
 
@@ -206,16 +208,17 @@ Paid option designed for pixel art, animation, palettes, and sprite sheets.
 
 ## 10. Recommended order
 
-1. Complete `USER_PROFILE.md`.
-2. Install Blender.
-3. Install the local project skills by opening this repository in Claude Code.
-4. Install the official Roblox Studio plugin.
-5. Install one Roblox skill set.
-6. Install Blender MCP only after testing Blender manually.
-7. Run the one-cube Blender MCP test.
-8. Test one 64x64 sprite before building a full pipeline.
-9. Use Poly Haven, Kenney, or Blendkit assets while checking licenses.
-10. Record successful commands and decisions in `CURRENT_STATE.md`.
+Done (2026-10-16): `USER_PROFILE.md`, project skills, official Roblox Studio plugin (verified), `token-efficiency`.
+
+Next, only when the phase needs it (see `docs/AUDIT_2026-10-16.md` §11):
+
+1. Phase 2 — Git + Rokit/Rojo/StyLua/selene (§5b).
+2. Phase 3 — Pillow (`pip install pillow`) for sprite post-processing; LibreSprite for occasional cleanup.
+3. Phase 7 — Blender, test it by hand, then uv + `mcp-for-blender` and the one-cube test.
+
+Not planned: third-party Roblox skill sets (§3) — the official Roblox MCP already bundles skills; add one only after reviewing it and if a gap appears.
+
+Record each install in `docs/SETUP_LOG.md` and update `docs/MCP_PLAN.md`.
 
 ## Safety
 

@@ -12,6 +12,7 @@ Continue **Rogue Tamer** (user decision, 2026-10-16). Steal a Meme stays private
 
 - **Steal a Meme** (Steal a Brainrot-style) — core loop is playable end to end; a new "forest mode" (99 Nights + tower defense) is built but switched off (`ForestMap.Active = false`). Before launch: real PassId/ProductId values (all 0, so no Robux comes in), remove or limit two fixed admin accounts, three failing sounds, test with real players and on mobile. **Private** (confirmed by the user, 2026-10-16); not being launched for now.
 - **Rogue Tamer** (PokéRogue-style, "Critter Rogue" place) — far larger than a prototype: 100 creatures, 34 biomes, 372 moves, many modes and systems. Missing: 14 special-form sprites, 11 icons, English translation, remove `DEV_UNLOCK_ALL`, real Premium Pass IDs. Open risks: huge scope, turn-based play is less sticky on Roblox, resemblance to Pokémon.
+- **Pure Incremental Factory Engine** (`games/incremental-factory/`, built 2026-10-20). This is a reusable, config-driven incremental engine (Argon) with a greybox test zone. It passes the type-check and a mocked simulation, but has not been tested in Studio. Missing: real product and gamepass IDs (all 0), and balancing with players.
 - A third idea (zombie survival, Project Zomboid-style) was only mentioned on 2026-10-13. Not started.
 
 ## Strongest money-making ideas
@@ -53,10 +54,22 @@ Continue **Rogue Tamer** (user decision, 2026-10-16). Steal a Meme stays private
 - Connectors (Gmail, Notion, Indeed, Calendar, Drive) are turned off by the user; changes apply to new sessions.
 - Verified (2026-10-16): the official Roblox Studio MCP detects the open place and answers a read-only state check (Studio was in Play mode). MCP setup is complete.
 - Unknown: the GitHub repositories in `docs/INSTALL.md` (Roblox plugin and third-party skills) could not be opened from the cloud session; check each one before installing.
+## Setup (summary — details in `docs/SETUP_LOG.md`, status in `docs/MCP_PLAN.md`)
+
+- Active: official Roblox Studio MCP on the PC (verified 2026-10-16); GitHub, Google Drive and Claude Docs in the cloud.
+- Skills: repository = `cheap-direct-mode`, `session-handoff`, `blender-pixel-art`; PC = `token-efficiency` (with hooks) plus those bundled with the Roblox MCP.
+- Postponed: Blender MCP, Playwright. Not recommended: Filesystem, Fetch, Git, Memory, Sequential Thinking.
+- Pending for the user: disable `mcpmarket-me` in claude.ai too; turn off Gmail, Notion, Indeed and Calendar connectors for Roblox sessions.
+
+## Key risks (audit 2026-10-16, `docs/AUDIT_2026-10-16.md`)
+
+- Game code is not version-controlled; it lives only in Studio. Save/publish before any MCP edit.
+- Gemini/Vertex AI credits expire 2027-01-03; Rogue Tamer still needs ~44 sprites.
+- Rogue Tamer reuses near-literal Pokémon names (Mega, Gigamax, Tera, item names). Rename before any public release.
 
 ## Open questions
 
-- When will Rogue Tamer get its first real players (closed test or limited release)?
+- When will Rogue Tamer get its first real players (closed test or limited release)? The incremental factory waits for this (`DECISIONS.md`).
 - Will recurring income (Roblox, tutoring) require registering as self-employed (autónomo)? Decide before the first payout.
 - Which kind of low-poly model is most used on the Creator Store (only if the side test continues)?
 - Which customer group is easiest to reach?

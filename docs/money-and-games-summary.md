@@ -32,7 +32,7 @@ If it pays out, it must be declared (W-8BEN, IRPF). If recurring, the tax office
 
 ## Honest observations from that summary
 
-1. Dispersion: three games, trading, lessons, studies, driving licence, channel and homelab are too much for a first semester. Publish Steal a Meme first.
+1. Dispersion: three games, trading, lessons, studies, driving licence, channel and homelab are too much for a first semester. Publish Steal a Meme first. *(Superseded 2026-10-16: Steal a Meme stays private and Rogue Tamer is the main project; see `DECISIONS.md`.)*
 2. Self-employment: the user does not want to be an autónomo, but recurring Roblox income and lessons may require it. Decide before the first payout.
 3. Anonymity: DevEx requires identity verification, so anonymity applies only to the public. Moving a game to another account loses visits and data.
 4. Honesty on a CV: state the real number of unique players of Steal a Meme (notes conflict: private vs published with a few hundred players).

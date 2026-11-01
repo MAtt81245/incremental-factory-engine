@@ -59,3 +59,25 @@ Record decisions so every AI can continue from the same place.
 - Alternatives considered: Launching Steal a Meme first (earlier recommendation by Claude).
 - Risks to watch: Rogue Tamer's scope is very large for one person, turn-based play is less sticky on Roblox, and it resembles Pokémon. No player data exists for it yet.
 - Revisit when: Rogue Tamer has real-player retention data, or if scope keeps growing without testers.
+
+### 2026-10-16 — Incremental game factory waits for Rogue Tamer
+
+- Decision: Until Rogue Tamer's closed test, the reusable incremental-game factory stays in `IDEAS.md`. No factory code is built before then.
+- Why: Building a factory before the first incremental game ships is over-engineering, and splitting time between two large projects is the main risk already noted.
+- Evidence: Audit in `docs/AUDIT_2026-10-16.md`. No player data for Rogue Tamer or any incremental game yet.
+- Alternatives considered: Pause Rogue Tamer and build incremental game 1 first.
+- Revisit when: Rogue Tamer's closed test has retention data.
+
+### 2026-10-16 — Merge overlapping skills
+
+- Decision: Merge `caveman-mode`, `model-router`, `subagent-gate`, and `research-budget` into `cheap-direct-mode`. Keep `session-handoff` and `blender-pixel-art`.
+- Why: The five skills repeated each other and `CLAUDE.md`; each skill description costs tokens every session. A skill cannot switch models, so `model-router` was misleading.
+- Revisit when: A missing behaviour shows up in practice.
+
+### 2026-10-20 — Build the incremental factory engine now
+
+- Decision: The user asked for the full "Pure Incremental Factory Engine" now. It is built in `games/incremental-factory/`. This replaces the 2026-10-16 "factory waits for Rogue Tamer" decision.
+- Why: It was an explicit user request. The engine is config-driven, so the first incremental game is mostly a new `IncrementalConfig.luau`.
+- Evidence: Strict type-check passes on all files (luau-lsp with Roblox definitions). In a mocked Luau run, the self-test passes (109 checks), and so does a simulated session covering every loop and prestige tier. It has not been run in Studio yet, and no player data exists.
+- Risks to watch: Time is split with Rogue Tamer, which was the main risk named before. The numbers are tuned for a fast test, not for retention.
+- Revisit when: It has been run in Studio, or a first incremental game is chosen.

@@ -65,3 +65,18 @@ Use one section per idea. Do not promote an idea here without recording its assu
 - Type: game
 - Status: build (main project since 2026-10-16). Next: smallest release real players can try, then measure retention
 - Main risks: huge scope, turn-based combat is less sticky on Roblox, resemblance to Pokémon.
+
+### Reusable incremental game factory (Roblox)
+
+- Type: game / tool
+- Customer: Roblox players (each game); the kit itself is for the user's own reuse.
+- Problem: each new game rebuilds data saving, economy, upgrades, prestige, purchases, and UI from scratch.
+- One-sentence offer: a data-driven kit (Rojo + git) where a new incremental game is a theme, assets, and one unique mechanic.
+- Why this could be different: unknown; depends on the unique mechanic of each game.
+- Free alternative: free Creator Store tycoon/simulator kits.
+- Startup cost: $0 (tools are free); optional 50–100 $ ad test per game.
+- Time to first test: game 1 in ≤ 3 weeks of work.
+- Main assumption: a small incremental game with a clear twist retains players well enough to be shown by the algorithm.
+- Cheapest validation test: build game 1 with clean modules, closed test plus a small ad test; extract the kit only when starting game 2.
+- Kill criteria: D1/D7 retention thresholds to be set before the test (unknown which numbers are good today; research first).
+- Status: waiting — after Rogue Tamer's closed test (decision 2026-10-16). Plan in `docs/AUDIT_2026-10-16.md` section 6.
