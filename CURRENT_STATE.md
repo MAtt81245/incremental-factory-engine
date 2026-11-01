@@ -33,6 +33,27 @@ Continue **Rogue Tamer** (user decision, 2026-10-16). Steal a Meme stays private
 - Use Gemini Pro for broad/current research.
 - Use ChatGPT Free for independent critique.
 
+## Setup audit (2026-10-16)
+
+- Fact: `USER_PROFILE.md` was filled in on 2026-10-16 and the game summaries were added in `docs/games/`.
+- Fact: the Claude project (cloud) already has GitHub (this repository only), Gmail, Google Calendar, Google Drive, Notion, Indeed and Claude Docs connected. `mcpmarket-me` failed to connect (proxy 403).
+- Fact: Roblox Studio, Blender, Filesystem, Fetch, Playwright and Memory MCPs must be installed in local Claude Code on the user's PC; a cloud session cannot reach them.
+- Fixed: Blender MCP docs now use `mcp-for-blender` (ahujasid), `docs/mcp.example.json` is valid JSON, `claude mcp add` commands use `--`, the blender-pixel-art skill header loads, and market-skills no longer lives in `/tmp`.
+- Fact (PC check, 2026-10-16): the official Roblox Studio MCP is already installed and connected (desktop extension `Roblox_Studio`, 30 tools, includes skills). Not yet tested with Studio open; Studio was updating. Do not add a second Roblox MCP.
+- Fact: the `mcpmarket-me` plugin's MCP fails with 401 (invalid token). Disabled on 2026-10-16 at the user's request (not deleted): `enabledPlugins` set to false in the user's `~/.claude/settings.json`, with a backup at `~/.claude/settings.json.bak-2026-10-16`. To re-enable, set it back to true or use Settings > Plugins.
+- Fact: Blender MCP is postponed by the user. When wanted: `winget install --id astral-sh.uv -e`, `winget install --id BlenderFoundation.Blender -e`, `uvx mcp-for-blender setup`, then a one-cube test in a new scene.
+- Fact: Fetch and Playwright are not installed (not needed now). The PC has winget, Node and Python 3.14; it lacks uv, gh and Blender.
+- Installed on the PC (2026-10-16, new Claude sessions pick them up):
+  - Skill `token-efficiency` from `denfry/claude-skills` pinned to commit `cc73299f5d9e5c1a800cf65015093bd527faf0e5`, in `~/.claude/skills/token-efficiency`, with its 4 hooks (session start, each message, after tools, stop) added by `hooks/install.py`. Backup: `settings.json.bak`. Remove hooks only: `python ~/.claude/skills/token-efficiency/hooks/install.py --uninstall`.
+  - MCP `sequential-thinking` was installed and removed the same day (`claude mcp remove sequential-thinking -s user`) to save tokens.
+- Minimal setup (2026-10-16): skills = `token-efficiency` (with hooks) plus the ones bundled with the official Roblox MCP; MCP = official Roblox Studio only; plugins = none (`mcpmarket-me` disabled); research = built-in web tools; sprites = made outside with Gemini; Blender MCP pending (uv, Blender, `uvx mcp-for-blender setup`).
+- Pending for the user: turn off the Gmail, Notion, Indeed, Google Calendar and Google Drive connectors in Roblox sessions (the app does not let Claude change connectors from a Project session): Claude desktop app, message box, + > Connectors; or claude.ai > Settings > Connectors.
+- Also installed on the PC (2026-10-16): the 7 skills from this repo's `.claude/skills/` copied to `~/.claude/skills` (8 skills with `token-efficiency`); statusline `denfry/claude-code-statusline` pinned to commit `80643fd` (`~/.claude/statusline.js`, `statusLine` in settings.json; shows in terminal Claude Code, may not show in the desktop app). The context audit (`context_budget.py --report`) came out clean.
+- Overlap note: `caveman-mode`, `cheap-direct-mode`, `model-router` and `token-efficiency` say nearly the same thing. If context needs trimming, keep `token-efficiency` and `cheap-direct-mode`.
+- The Roblox place 116788919429102 (`10162026_2`) is the working COPY; it can be edited through the MCP while Play mode is stopped.
+- Connectors (Gmail, Notion, Indeed, Calendar, Drive) are turned off by the user; changes apply to new sessions.
+- Verified (2026-10-16): the official Roblox Studio MCP detects the open place and answers a read-only state check (Studio was in Play mode). MCP setup is complete.
+- Unknown: the GitHub repositories in `docs/INSTALL.md` (Roblox plugin and third-party skills) could not be opened from the cloud session; check each one before installing.
 ## Setup (summary — details in `docs/SETUP_LOG.md`, status in `docs/MCP_PLAN.md`)
 
 - Active: official Roblox Studio MCP on the PC (verified 2026-10-16); GitHub, Google Drive and Claude Docs in the cloud.
